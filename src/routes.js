@@ -1,8 +1,8 @@
 const express = require('express')
 const routes = express.Router()
 
-routes.use('/', function(req, res){
-    return res.render('index')
-})
+const Home = require('./app/controllers/HomeController')
+
+routes.use('/', Home.index)
 
 module.exports = routes
