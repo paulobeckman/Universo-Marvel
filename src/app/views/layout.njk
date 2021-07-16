@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/marvel-icon.png">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Universo Marvel</title>
 </head>
 <body>
-    <header>
-        <div class="links">
-            <a href="">Marvel</a>
-            <a href="*">Home</a>
-            <a href="*">Personagens</a>
-            <a href="*">Quadrinhos</a>
-            <a href="*">Filmes</a>
-        </div>
-    </header>
+    <div class="background-gray">
+        <header>
+            <div class="container">
+                <nav class="links">
+                    <a href="*"><img src="image/Marvel_Logo.png" alt="logo marvel"></a>
+                    <a href="*">Home</a>
+                    <a href="*">Personagens</a>
+                    <a href="*">Quadrinhos</a>
+                    <a href="*">Filmes</a>
+                </nav>
+            </div>
+        </header>
 
-    {%block content%}
-    {%endblock%}
+        <div class="banner">
+            {%block banner%}
+            {%endblock%}
+        </div>
+    </div>
 </body>
 </html>
