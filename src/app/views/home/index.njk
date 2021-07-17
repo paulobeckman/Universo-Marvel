@@ -1,8 +1,32 @@
 {%extends 'layout.njk'%}
 
 {%block banner%}
-    <h1>universo <span>marvel</span></h1>
-    <p>Aqui você encontra informações de personagens, quadrinhos e filmes que fazem parte do universo Marvel...</p>
+    <h1 class="banner__title">universo <span class="banner__title-red">marvel</span></h1>
+    <p class="banner__description">Aqui você encontra informações de personagens, quadrinhos e filmes que fazem parte do universo Marvel...</p>
 
-    <i class="material-icons">expand_more</i>
+    <i class="banner__icon material-icons">expand_more</i>
+{%endblock%}
+
+{%block characters%}
+    <section class="characters__section-first">
+        <h1 class="characters__title">Personagens</h1>
+        <p class="characters__description">Aqui você encontra personagens do mundo Marvel e quadrinhos, filmes que ele tem participação.</p>
+    </section>
+
+    <section class="characters__section-second">
+        <div class="characters__cards">
+            <div class="characters__card">
+                <img src="image/img.png" alt="capa personagens" class="characters__img">
+                <p class="characters__name">Spider-Man</p>
+            </div>
+            <div class="characters__card">
+                <img src="image/img.png" alt="capa personagens" class="characters__img">
+                <p class="characters__name">Spider-Man</p>
+            </div>
+        </div>
+
+        <a href="*" class="characters__button">Explorar</a>
+    </section>
+
+    
 {%endblock%}

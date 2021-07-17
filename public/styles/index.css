@@ -2,11 +2,17 @@
     --white: #FFF;
     --gray: #202020;
     --red: #ED1D24;
+    --text-gray: #23272A;
+    --text-black: #000000;
 } 
 
 body {
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
+} 
+
+h1, a{
+    margin: 0;
 }
 
 .background-gray{
@@ -20,19 +26,19 @@ body {
     padding-top: 40px;
 }
 
-header nav img {
-    height: 60px;
-}
-
-header nav {
+.links {
     display: flex;
 }
 
-header nav a + a{
+.links__img {
+    height: 60px;
+}
+
+.links__item + .links__item{
     margin-left: 80px;
 }
 
-header nav a {
+.links__item {
     margin-bottom: auto;
     text-decoration: none;
     font-weight: 500;
@@ -47,7 +53,7 @@ header nav a {
     margin: 10px auto;
 }
 
-.banner h1{
+.banner__title{
     text-transform: uppercase;
     font-weight: 600;
     font-size: 80px;
@@ -57,11 +63,11 @@ header nav a {
     margin: 110px 0
 }
 
-.banner h1 span{
+.banner__title-red{
     color: var(--red);
 }
 
-.banner p {
+.banner__description {
     font-weight: 300;
     font-size: 25px;
     line-height: 37px;
@@ -70,8 +76,77 @@ header nav a {
     margin: 0;
 }
 
-.banner i{
+.banner__icon.material-icons{
     font-size: 55px;
     color: var(--white);
     margin: 50px 0;
+}
+
+.characters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 120px;
+
+    align-items: center;
+
+}
+
+.characters__title{
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 90px;
+    letter-spacing: 0.1em;
+    color: var(--text-gray);
+
+    margin-bottom: 90px;
+}
+
+.characters__description{
+    color: var(--text-black);
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 0.2em;
+
+    margin: 0;
+}
+
+.characters__cards{
+    display: flex;
+    column-gap: 47px;
+    height: 100%;
+}
+
+.characters__img{
+    border-radius: 10px 10px 0 0;
+}
+
+.characters__name {
+    background: var(--gray);
+    color: var(--white);
+
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.1em;
+    text-align: center;
+
+    padding: 17px 50px;
+    border-radius: 0 0 10px 10px;
+    margin: 0;
+}
+
+.characters__button{
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 45px;
+    letter-spacing: 0.1em;
+
+    border: 3px solid var(--red);
+    background: var(--gray);
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    padding: 18px 70px;
 }

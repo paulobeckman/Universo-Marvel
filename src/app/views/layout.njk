@@ -16,11 +16,11 @@
         <header>
             <div class="container">
                 <nav class="links">
-                    <a href="*"><img src="image/Marvel_Logo.png" alt="logo marvel"></a>
-                    <a href="*">Home</a>
-                    <a href="*">Personagens</a>
-                    <a href="*">Quadrinhos</a>
-                    <a href="*">Filmes</a>
+                    <a href="*" class="links__item"><img src="image/Marvel_Logo.png" alt="logo marvel" class="links__img"></a>
+                    <a href="*" class="links__item">Home</a>
+                    <a href="*" class="links__item">Personagens</a>
+                    <a href="*" class="links__item">Quadrinhos</a>
+                    <a href="*" class="links__item">Filmes</a>
                 </nav>
             </div>
         </header>
@@ -29,6 +29,11 @@
             {%block banner%}
             {%endblock%}
         </div>
+    </div>
+
+    <div class="container characters">
+        {%block characters%}
+        {%endblock%}
     </div>
 </body>
 </html>
