@@ -7,11 +7,9 @@
     "start": "npm-run-all -p nodemon browsersync",
     "nodemon": "nodemon src/server.js",
     "browsersync": "browser-sync start --proxy http://localhost:5000 --files 'public, src/app/views'"
-  },
-  "husky":{
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+  },  
+  "hooks": {
+    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
   },
   "keywords": [],
   "author": "",
