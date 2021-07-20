@@ -8,25 +8,74 @@
 {%endblock%}
 
 {%block characters%}
-    <section class="characters__section-first">
-        <h1 class="characters__title">Personagens</h1>
-        <p class="characters__description">Aqui você encontra personagens do mundo Marvel e quadrinhos, filmes que ele tem participação.</p>
+    <section class="session__section">
+        <h1 class="session__title">Personagens</h1>
+        <p class="session__description">Aqui você encontra personagens do mundo Marvel e quadrinhos, filmes que ele tem participação.</p>
     </section>
 
-    <section class="characters__section-second">
-        <div class="characters__cards">
-            <div class="characters__card">
-                <img src="image/img.png" alt="capa personagens" class="characters__img">
-                <p class="characters__name">Spider-Man</p>
+    <section class="session__section">
+        <div class="session__cards">
+            <div class="session__card primary">
+                <img src="image/img.png" alt="capa personagens" class="session__img">
+                <p class="session__name">Spider-Man</p>
             </div>
-            <div class="characters__card">
-                <img src="image/img.png" alt="capa personagens" class="characters__img">
-                <p class="characters__name">Spider-Man</p>
+            <div class="session__card second">
+                <img src="image/img.png" alt="capa personagens" class="session__img">
+                <p class="session__name">Spider-Man</p>
             </div>
         </div>
 
-        <a href="*" class="characters__button">Explorar</a>
+        <a href="*" class="session__button">Explorar</a>
+    </section>    
+{%endblock%}
+
+{%block comics%}
+    <section class="session__section">
+        <div class="session__cards">
+            <div class="session__card primary">
+                <img src="image/img.png" alt="capa personagens" class="session__img">
+                <p class="session__name">Spider-Man</p>
+            </div>
+            <div class="session__card second">
+                <img src="image/img.png" alt="capa personagens" class="session__img">
+                <p class="session__name">Spider-Man</p>
+            </div>
+        </div>
+
+        <a href="*" class="session__button">Explorar</a>
     </section>
 
-    
+    <section class="session__section">
+        <h1 class="session__title">Quadrinhos</h1>
+        <p class="session__description">Aqui você pode encontrar os mais diversos quadrinhos da Marvel, fique  à vontade para explorar.</p>
+    </section>
+{%endblock%}
+
+{%block movies%}
+<h1 class="session__title">Filmes</h1>
+<p class="session__description">Aqui é onde você viajar pelo Universo Cinematográfico Marvel.</p>
+
+<div class="session__cards">
+    <div class="session__card">
+        <img src="image/img.png" alt="capa personagens" class="session__img">
+        <p class="session__name">Spider-Man</p>
+    </div>
+    <div class="session__card">
+        <img src="image/img.png" alt="capa personagens" class="session__img">
+        <p class="session__name">Spider-Man</p>
+    </div>
+
+    <div class="session__card">
+        <img src="image/img.png" alt="capa personagens" class="session__img">
+        <p class="session__name">Spider-Man</p>
+    </div>
+
+    <div class="session__card">
+        <img src="image/img.png" alt="capa personagens" class="session__img">
+        <p class="session__name">Spider-Man</p>
+    </div>
+</div>
+
+<a href="*" class="session__button">Explorar</a>
+
 {%endblock%}
