@@ -5,6 +5,7 @@
   "main": "src/server.js",
   "scripts": {
     "prepare": "husky install",
+    "commit": "cz",
     "start": "npm-run-all -p nodemon browsersync",
     "nodemon": "nodemon src/server.js",
     "browsersync": "browser-sync start --proxy http://localhost:5000 --files 'public, src/app/views'"
@@ -27,8 +28,14 @@
     "@commitlint/config-conventional": "^12.1.4",
     "browser-sync": "^2.27.4",
     "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
     "husky": "^7.0.1",
     "nodemon": "^2.0.12",
     "npm-run-all": "^4.1.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
