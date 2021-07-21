@@ -4,11 +4,12 @@
   "description": "",
   "main": "src/server.js",
   "scripts": {
+    "prepare": "husky install",
     "start": "npm-run-all -p nodemon browsersync",
     "nodemon": "nodemon src/server.js",
     "browsersync": "browser-sync start --proxy http://localhost:5000 --files 'public, src/app/views'"
   },
-  "husky":{
+  "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
@@ -29,10 +30,5 @@
     "husky": "^7.0.1",
     "nodemon": "^2.0.12",
     "npm-run-all": "^4.1.5"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }
