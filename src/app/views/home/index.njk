@@ -8,38 +8,34 @@
 {%endblock%}
 
 {%block characters%}
-    <section class="session__section">
-        <h1 class="session__title">Personagens</h1>
-        <p class="session__description">Aqui você encontra personagens do mundo Marvel e quadrinhos, filmes que ele tem participação.</p>
-    </section>
+        <section class="session__section">
+            <h1 class="session__title">Personagens</h1>
+            <p class="session__description">Aqui você encontra personagens do mundo Marvel e quadrinhos, filmes que ele tem participação.</p>
+        </section>
 
-    <section class="session__section">
-        <div class="session__cards">
-            <div class="session__card primary">
-                <img src="image/img.png" alt="capa personagens" class="session__img">
-                <p class="session__name">Spider-Man</p>
+        <section class="session__section">
+            <div class="session__cards">
+                {% for character in characters %}
+                    <div class="session__card primary">
+                        <img src="{{character.thumbnail.path}}/portrait_fantastic.{{character.thumbnail.extension}}" alt="capa personagens" class="session__img">
+                        <p class="session__name">{{character.name}}</p>
+                    </div>
+                {% endfor %}
             </div>
-            <div class="session__card second">
-                <img src="image/img.png" alt="capa personagens" class="session__img">
-                <p class="session__name">Spider-Man</p>
-            </div>
-        </div>
 
-        <a href="*" class="session__button">Explorar</a>
-    </section>    
+            <a href="*" class="session__button">Explorar</a>
+        </section>
 {%endblock%}
 
 {%block comics%}
     <section class="session__section">
         <div class="session__cards">
-            <div class="session__card primary">
-                <img src="image/img.png" alt="capa personagens" class="session__img">
-                <p class="session__name">Spider-Man</p>
-            </div>
-            <div class="session__card second">
-                <img src="image/img.png" alt="capa personagens" class="session__img">
-                <p class="session__name">Spider-Man</p>
-            </div>
+            {% for comic in comics %}
+                <div class="session__card primary">
+                    <img src="{{comic.thumbnail.path}}/portrait_fantastic.{{comic.thumbnail.extension}}" alt="capa personagens" class="session__img">
+                    <p class="session__name">{{comic.title}}</p>
+                </div>
+            {% endfor %}
         </div>
 
         <a href="*" class="session__button">Explorar</a>
@@ -52,28 +48,16 @@
 {%endblock%}
 
 {%block movies%}
-<h1 class="session__title">Filmes</h1>
+<h1 class="session__title">Series</h1>
 <p class="session__description">Aqui é onde você viajar pelo Universo Cinematográfico Marvel.</p>
 
 <div class="session__cards">
-    <div class="session__card">
-        <img src="image/img.png" alt="capa personagens" class="session__img">
-        <p class="session__name">Spider-Man</p>
-    </div>
-    <div class="session__card">
-        <img src="image/img.png" alt="capa personagens" class="session__img">
-        <p class="session__name">Spider-Man</p>
-    </div>
-
-    <div class="session__card">
-        <img src="image/img.png" alt="capa personagens" class="session__img">
-        <p class="session__name">Spider-Man</p>
-    </div>
-
-    <div class="session__card">
-        <img src="image/img.png" alt="capa personagens" class="session__img">
-        <p class="session__name">Spider-Man</p>
-    </div>
+    {% for serie in series %}
+        <div class="session__card">
+            <img src="{{serie.thumbnail.path}}/portrait_fantastic.{{serie.thumbnail.extension}}" alt="capa personagens" class="session__img">
+            <p class="session__name">{{serie.title}}</p>
+        </div>
+    {% endfor %}
 </div>
 
 <a href="*" class="session__button">Explorar</a>
