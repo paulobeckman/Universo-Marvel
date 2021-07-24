@@ -3,6 +3,10 @@ const routes = express.Router()
 
 const Home = require('./app/controllers/HomeController')
 
-routes.use('/', Home.index)
+routes.get('/', function(req, res){
+    return res.redirect("/home")
+})
+
+routes.use('/home', Home.index)
 
 module.exports = routes

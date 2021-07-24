@@ -1,0 +1,30 @@
+.links {
+    display: flex;
+}
+
+.links__img {
+    height: 60px;
+}
+
+.links__item + .links__item{
+    margin-left: 80px;
+}
+
+.links__item {
+    margin-bottom: auto;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--white);
+    transition: 0.1s;
+}
+
+.links__item:hover {
+    color: #9F9F9F;
+    transition: 0.1s;
+}
+
+.links__item.active{
+    border-bottom: 3.5px solid #ED1D24;
+}
