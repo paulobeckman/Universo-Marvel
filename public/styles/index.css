@@ -144,16 +144,23 @@ footer {
 }
 
 .session__cards{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
     column-gap: 47px;
     justify-content: center;
 }
 
-.session__card.primary{
+.session__img{
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.session__card:first-child{
     transform: translateY(60px);
 }
 
-.session__card.second{
+.session__card:last-child{
     transform: translateY(-60px);
 }
 
@@ -169,10 +176,14 @@ footer {
     line-height: 30px;
     letter-spacing: 0.1em;
     text-align: center;
-
-    padding: 17px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 20px 10px;
     border-radius: 0 0 10px 10px;
     margin: 0;
+    height: 100px;
 }
 
 .session__button{
@@ -191,18 +202,18 @@ footer {
     padding: 18px 70px;
     
     margin: 0 auto;
-    margin-top: 130px;
+    margin-top: 100px;
 }
 
 .comics{
     background: var(--background-tertiary);
 }
 
-.comics .session__card.primary{
+.comics .session__card:last-child{
     transform: translateY(-60px);
 }
 
-.comics .session__card.second{
+.comics .session__card:first-child{
     transform: translateY(60px);
 }
 
@@ -222,6 +233,18 @@ footer {
 .movies .session__description{
     text-align: center;
     margin-bottom: 50px;
+}
+
+.movies .session__cards{
+    grid-template-columns: repeat(4, 250px);
+}
+
+.movies .session__card:first-child{
+    transform: translateY(0);
+}
+
+.movies .session__card:last-child{
+    transform: translateY(0);
 }
 
 .movies .session__button{

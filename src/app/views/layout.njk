@@ -20,7 +20,7 @@
                     <a href="*" class="links__item">Home</a>
                     <a href="*" class="links__item">Personagens</a>
                     <a href="*" class="links__item">Quadrinhos</a>
-                    <a href="*" class="links__item">Filmes</a>
+                    <a href="*" class="links__item">Series</a>
                 </nav>
             </div>
         </header>
@@ -31,22 +31,7 @@
         </div>
     </div>
 
-    <div class="container session">
-        {%block characters%}
-        {%endblock%}
-    </div>
-
-    <div class="comics">
-        <div class="container session">
-            {%block comics%}
-            {%endblock%}
-        </div>
-    </div>
-
-    <div class="container movies">
-        {%block movies%}
-        {%endblock%}
-    </div>
+    {% block main%}{%endblock%}
 
     <footer>Feito por paulo beckman</footer>
 </body>
