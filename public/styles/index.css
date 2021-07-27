@@ -57,7 +57,7 @@ footer {
 .banner {
     text-align: center;
     max-width: 1016px;
-    margin: 10px auto;
+    margin: 0 auto;
 }
 
 .banner__title{
@@ -122,49 +122,6 @@ footer {
     margin: 0;
 }
 
-.session__cards{
-    display: grid;
-    grid-template-columns: repeat(2, 250px);
-    column-gap: 47px;
-    justify-content: center;
-}
-
-.session__img{
-    width: 250px;
-    height: 350px;
-    object-fit: cover;
-}
-
-.session__card:first-child{
-    transform: translateY(60px);
-}
-
-.session__card:last-child{
-    transform: translateY(-60px);
-}
-
-.session__img{
-    border-radius: 10px 10px 0 0;
-}
-
-.session__name {
-    background: var(--gray);
-    color: var(--white);
-
-    font-size: 20px;
-    line-height: 30px;
-    letter-spacing: 0.1em;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    padding: 20px 10px;
-    border-radius: 0 0 10px 10px;
-    margin: 0;
-    height: 100px;
-}
-
 .session__button{
     font-size: 30px;
     font-weight: 600;
@@ -188,14 +145,6 @@ footer {
     background: var(--background-tertiary);
 }
 
-.comics .session__card:last-child{
-    transform: translateY(-60px);
-}
-
-.comics .session__card:first-child{
-    transform: translateY(60px);
-}
-
 .movies{
     display: flex;
     flex-direction: column;
@@ -212,18 +161,6 @@ footer {
 .movies .session__description{
     text-align: center;
     margin-bottom: 50px;
-}
-
-.movies .session__cards{
-    grid-template-columns: repeat(4, 250px);
-}
-
-.movies .session__card:first-child{
-    transform: translateY(0);
-}
-
-.movies .session__card:last-child{
-    transform: translateY(0);
 }
 
 .movies .session__button{

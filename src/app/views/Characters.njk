@@ -1,0 +1,23 @@
+{% extends 'layout.njk' %}
+
+{% block banner %}
+  <h1 class="banner__title">Personagens</h1>
+  <p class="banner__description">Aqui você encontra personagens do mundo Marvel e quadrinhos, filmes que ele tem
+    participação.</p>
+  <i class="banner__icon material-icons">expand_more</i>
+{% endblock %}
+
+{% block main %}
+  <div class="container all">
+    <div class="session__section">
+      <div class="session__cards">
+        {% for character in characters %}
+          <div class="session__card">
+            <img src="{{ character.thumbnail.path }}/portrait_fantastic.{{ character.thumbnail.extension }}" alt="{{character.name}}" class="session__img">
+            <p class="session__name">{{character.name}}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

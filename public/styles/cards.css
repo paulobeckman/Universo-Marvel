@@ -1,0 +1,78 @@
+/*HOME*/
+.session__cards{
+  display: grid;
+  grid-template-columns: repeat(2, 250px);
+  column-gap: 47px;
+  justify-content: center;
+}
+
+.session__img{
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+
+  border-radius: 10px 10px 0 0;
+}
+
+.session__card:first-child{
+  transform: translateY(60px);
+}
+
+.session__card:last-child{
+  transform: translateY(-60px);
+}
+
+.session__name {
+  background: var(--gray);
+  color: var(--white);
+
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 20px 10px;
+  border-radius: 0 0 10px 10px;
+  margin: 0;
+  height: 100px;
+}
+
+.comics .session__card:last-child{
+  transform: translateY(-60px);
+}
+
+.comics .session__card:first-child{
+  transform: translateY(60px);
+}
+
+.movies .session__cards{
+  grid-template-columns: repeat(4, 250px);
+}
+
+.movies .session__card:first-child{
+  transform: translateY(0);
+}
+
+.movies .session__card:last-child{
+  transform: translateY(0);
+}
+
+/*CHARACTERS, COMICS, SERIES*/
+.all .session__cards{
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  row-gap: 60px;
+
+  padding: 55px 0;
+}
+
+.all .session__card:first-child{
+  transform: translateY(0);
+}
+
+.all .session__card:last-child{
+  transform: translateY(0);
+}

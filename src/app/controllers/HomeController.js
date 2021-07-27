@@ -1,5 +1,5 @@
-const api = require('../../services/api')
 require('dotenv/config');
+const api = require('../../services/api')
 
 module.exports = {
     async index(req, res){
@@ -20,6 +20,6 @@ module.exports = {
                 return response.data.data.results
             });
 
-        return res.render('home/index', {characters, comics, series})
+        return res.render('Home', {characters, comics, series})
     }
 }
