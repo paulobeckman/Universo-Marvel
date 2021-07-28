@@ -10,9 +10,10 @@ routes.get('/', function(req, res){
     return res.redirect("/home")
 })
 
-routes.use('/home', Home.index)
-routes.use('/characters', Characters.index)
-routes.use('/comics', Comics.index)
-routes.use('/series', Series.index)
+routes.get('/home', Home.index)
+routes.get('/characters', Characters.index)
+routes.get('/characters/:id', Characters.show)
+routes.get('/comics', Comics.index)
+routes.get('/series', Series.index)
 
 module.exports = routes

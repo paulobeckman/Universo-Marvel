@@ -9,6 +9,18 @@ module.exports = {
             .then(response => {
                 return response.data.data.results
             });
-        return res.render('Characters', {characters})
+
+        return res.render('Characters/index', {characters})
+    },
+    async show(req, res){
+        const { APP_API_KEY, APP_HASH } = process.env
+        const { id } = req.params
+
+        const character = await api.get(`characters/${id}?ts=1616200616&apikey=${APP_API_KEY}&hash=${APP_HASH}`)
+            .then(response => {
+                return response.data.data.results
+            });
+
+        return res.render('Characters/show', {character})
     }
 }

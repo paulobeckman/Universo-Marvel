@@ -6,3 +6,12 @@ for (item of menuItems) {
         item.classList.add("active")
     }
 }
+
+const cards = document.querySelectorAll(".session__card")
+
+for (let card of cards){
+    card.addEventListener("click", function(){
+        const id = card.getAttribute("id")
+        location.href=`/characters/${id}`
+    })
+}
