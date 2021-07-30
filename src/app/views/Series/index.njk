@@ -11,7 +11,7 @@
     <div class="session__section">
       <div class="session__cards">
         {% for serie in series %}
-          <div class="session__card">
+          <div class="session__card" id="{{serie.id}}">
             <img src="{{ serie.thumbnail.path }}/portrait_fantastic.{{ serie.thumbnail.extension }}" alt="{{serie.title}}" class="session__img">
             <p class="session__name">{{ serie.title }}</p>
           </div>

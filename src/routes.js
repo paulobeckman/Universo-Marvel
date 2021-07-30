@@ -11,9 +11,14 @@ routes.get('/', function(req, res){
 })
 
 routes.get('/home', Home.index)
+
 routes.get('/characters', Characters.index)
 routes.get('/characters/:id', Characters.show)
+
 routes.get('/comics', Comics.index)
+routes.get('/comics/:id', Comics.show)
+
 routes.get('/series', Series.index)
+routes.get('/series/:id', Series.show)
 
 module.exports = routes

@@ -16,9 +16,9 @@ module.exports = {
         const { APP_API_KEY, APP_HASH } = process.env
         const { id } = req.params
 
-        const character = await api.get(`characters/${id}?ts=1616200616&apikey=${APP_API_KEY}&hash=${APP_HASH}`)
+        const character = await api.get(`characters/${id}?limit=2&ts=1616200616&apikey=${APP_API_KEY}&hash=${APP_HASH}`)
             .then(response => {
-                return response.data.data.results
+                return response.data.data.results[0]
             });
 
         return res.render('Characters/show', {character})

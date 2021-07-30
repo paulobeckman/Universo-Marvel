@@ -1,0 +1,8 @@
+{% extends 'layout.njk'%}
+
+{% block banner %}
+  <img src="{{comic.thumbnail.path}}/portrait_fantastic.{{comic.thumbnail.extension}}" alt="{{comic.name}}" alt="">
+  <h1 class="banner__title">{{comic.name}}</h1>
+  <p class="banner__description">{{comic.description}}</p>
+  <i class="banner__icon material-icons">expand_more</i>
+{% endblock %}

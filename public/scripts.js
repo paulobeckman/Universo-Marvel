@@ -8,10 +8,11 @@ for (item of menuItems) {
 }
 
 const cards = document.querySelectorAll(".session__card")
+const currentUrl = location.pathname
 
 for (let card of cards){
     card.addEventListener("click", function(){
         const id = card.getAttribute("id")
-        location.href=`/characters/${id}`
+        location.href=`${currentUrl}/${id}`
     })
 }
