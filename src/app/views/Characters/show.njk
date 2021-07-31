@@ -6,3 +6,9 @@
   <p class="banner__description">{{character.description}}</p>
   <i class="banner__icon material-icons">expand_more</i>
 {% endblock %}
+
+{% block main%}
+  {% for comic in comics%}
+    <p>{{comic.title}}</p>
+  {%endfor%}
+{% endblock%}}
