@@ -76,3 +76,7 @@
 .all .session__card:last-child{
   transform: translateY(0);
 }
+
+.all .session__title {
+  margin: 50px 0 0;
+}

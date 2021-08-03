@@ -25,12 +25,15 @@ module.exports = {
             const newComic = await api.get(`comics/${comicId}?limit=50&ts=1616200616&apikey=${APP_API_KEY}&hash=${APP_HASH}`)
             return newComic.data.data.results[0]
         })
+        const resultComics = await Promise.all(comics)
 
-        const result = await Promise.all(comics)
+        const series = character[0].series.items.map( async serie => {
+            const serieId = serie.resourceURI.split('/').reverse()[0]
+            const newSerie = await api.get(`series/${serieId}?limit=50&ts=1616200616&apikey=${APP_API_KEY}&hash=${APP_HASH}`)
+            return newSerie.data.data.results[0]
+        })
+        const resultSeries = await Promise.all(series)
 
-        // console.log(JSON.stringify(character[0], null, 2))
-        console.log(JSON.stringify(result[0].title, null, 2))
-
-        return res.render('Characters/show', {character:character[0], comics: result})
+        return res.render('Characters/show', {character:character[0], comics: resultComics, series: resultSeries})
     }
 }

@@ -1,8 +1,10 @@
 {% extends 'layout.njk'%}
 
 {% block banner %}
-  <img src="{{serie.thumbnail.path}}/portrait_fantastic.{{serie.thumbnail.extension}}" alt="{{serie.name}}" alt="">
-  <h1 class="banner__title">{{serie.name}}</h1>
+  <div class="banner_session">
+    <img class="banner_img" src="{{serie.thumbnail.path}}/portrait_fantastic.{{serie.thumbnail.extension}}" alt="{{serie.name}}">
+    <h1 class="banner__title">{{serie.title}}</h1>
+  </div>
   <p class="banner__description">{{serie.description}}</p>
   <i class="banner__icon material-icons">expand_more</i>
 {% endblock %}

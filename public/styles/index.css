@@ -60,6 +60,21 @@ footer {
     margin: 0 auto;
 }
 
+.banner_session {
+    display: flex;
+    gap: 63px;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner_img{
+    width: 250px;
+    height: 250px;
+
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 .banner__title{
     text-transform: uppercase;
     font-weight: 600;
@@ -165,4 +180,9 @@ footer {
 
 .movies .session__button{
     margin-top: 60px;
+}
+
+/*CHARACTERS, COMICS, SERIES*/
+.all .session__description{
+    padding: 30px 10px 20px;
 }

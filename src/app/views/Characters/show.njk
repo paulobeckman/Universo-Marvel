@@ -1,14 +1,36 @@
 {% extends '../layout.njk'%}
 
 {% block banner %}
-  <img src="{{character.thumbnail.path}}/portrait_fantastic.{{character.thumbnail.extension}}" alt="{{character.name}}" alt="">
-  <h1 class="banner__title">{{character.name}}</h1>
+  <div class="banner_session">
+    <img class="banner_img" src="{{character.thumbnail.path}}/portrait_fantastic.{{character.thumbnail.extension}}" alt="{{character.name}}">
+    <h1 class="banner__title">{{character.name}}</h1>
+  </div>
   <p class="banner__description">{{character.description}}</p>
   <i class="banner__icon material-icons">expand_more</i>
 {% endblock %}
 
 {% block main%}
-  {% for comic in comics%}
-    <p>{{comic.title}}</p>
-  {%endfor%}
+<div class="container all">
+  <section class="session__section">
+    <h1 class="session__title">Quadrinhos</h1>
+    <div class="session__cards">
+      {% for comic in comics %}
+          <div class="session__card" id="{{comic.id}}">
+              <img src="{{comic.thumbnail.path}}/portrait_fantastic.{{comic.thumbnail.extension}}" alt="{{comic.name}}" class="session__img">
+              <p class="session__name">{{comic.title}}</p>
+          </div>
+      {% endfor %}
+    </div>
+
+    <h1 class="session__title">Series</h1>
+    <div class="session__cards">
+      {% for serie in series %}
+          <div class="session__card">
+              <img src="{{serie.thumbnail.path}}/portrait_fantastic.{{serie.thumbnail.extension}}" alt="{{serie.name}}" class="session__img">
+              <p class="session__name">{{serie.title}}</p>
+          </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
 {% endblock%}}

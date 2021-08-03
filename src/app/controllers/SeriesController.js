@@ -16,10 +16,10 @@ module.exports = {
         const { APP_API_KEY, APP_HASH } = process.env
         const { id } = req.params
 
-        const serie = await api.get(`series/${id}?limit=2&ts=1616200616&apikey=${APP_API_KEY}&hash=${APP_HASH}`)
-            .then(response => {
-                return response.data.data.results
-            });
+        const response = await api.get(`series/${id}?limit=2&ts=1616200616&apikey=${APP_API_KEY}&hash=${APP_HASH}`)
+        const serie = response.data.data.results[0]
+
+        console.log(JSON.stringify(serie, null, 2))
 
         return res.render('Series/show', {serie})
     }
