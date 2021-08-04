@@ -67,12 +67,18 @@ footer {
     align-items: center;
 }
 
+.banner_container-img{
+    width: 250px;
+    height: 250px;
+}
+
 .banner_img{
     width: 250px;
     height: 250px;
 
     object-fit: cover;
     border-radius: 50%;
+    border: solid 10px var(--red);
 }
 
 .banner__title{

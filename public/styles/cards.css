@@ -6,6 +6,10 @@
   justify-content: center;
 }
 
+.session__card {
+  cursor: pointer;
+}
+
 .session__img{
   width: 250px;
   height: 350px;

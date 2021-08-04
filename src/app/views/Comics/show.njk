@@ -2,7 +2,9 @@
 
 {% block banner %}
   <div class="banner_session">
-    <img class="banner_img" src="{{comic.thumbnail.path}}/portrait_fantastic.{{comic.thumbnail.extension}}" alt="{{comic.name}}" alt="">
+    <div class="banner_container-img">
+      <img class="banner_img" src="{{comic.thumbnail.path}}/portrait_fantastic.{{comic.thumbnail.extension}}" alt="{{comic.name}}" alt="">
+    </div>
     <h1 class="banner__title">{{comic.title}}</h1>
   </div>
   <p class="banner__description">{{comic.description}}</p>

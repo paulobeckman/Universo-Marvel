@@ -2,7 +2,9 @@
 
 {% block banner %}
   <div class="banner_session">
-    <img class="banner_img" src="{{character.thumbnail.path}}/portrait_fantastic.{{character.thumbnail.extension}}" alt="{{character.name}}">
+    <div class="banner_container-img">
+      <img class="banner_img" src="{{character.thumbnail.path}}/portrait_fantastic.{{character.thumbnail.extension}}" alt="{{character.name}}">
+    </div>
     <h1 class="banner__title">{{character.name}}</h1>
   </div>
   <p class="banner__description">{{character.description}}</p>
