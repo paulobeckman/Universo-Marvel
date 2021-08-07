@@ -12,7 +12,7 @@
     <div class="session__section">
       <div class="session__cards">
         {% for character in characters %}
-          <div class="session__card" id="{{character.id}}">
+          <div class="session__card slideTopBottom" id="{{character.id}}">
             <img src="{{ character.thumbnail.path }}/portrait_fantastic.{{ character.thumbnail.extension }}" alt="{{character.name}}" class="session__img">
             <p class="session__name">{{character.name}}</p>
           </div>

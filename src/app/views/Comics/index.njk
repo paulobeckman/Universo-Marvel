@@ -13,7 +13,7 @@
     <div class="session__section">
       <div class="session__cards">
         {% for comic in comics %}
-          <div class="session__card" id="{{comic.id}}">
+          <div class="session__card slideTopBottom" id="{{comic.id}}">
             <img src="{{ comic.thumbnail.path }}/portrait_fantastic.{{ comic.thumbnail.extension }}" alt="{{comic.title}}" class="session__img">
             <p class="session__name">{{ comic.title }}</p>
           </div>

@@ -13,6 +13,9 @@ const currentUrl = location.pathname
 for (let card of cards){
     card.addEventListener("click", function(){
         const id = card.getAttribute("id")
+        if(!id){
+            return
+        }
         location.href=`${currentUrl}/${id}`
     })
 }

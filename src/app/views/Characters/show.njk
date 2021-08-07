@@ -17,7 +17,7 @@
     <h1 class="session__title">Quadrinhos</h1>
     <div class="session__cards">
       {% for comic in comics %}
-          <div class="session__card" id="{{comic.id}}">
+          <div class="session__card">
               <img src="{{comic.thumbnail.path}}/portrait_fantastic.{{comic.thumbnail.extension}}" alt="{{comic.name}}" class="session__img">
               <p class="session__name">{{comic.title}}</p>
           </div>

@@ -10,19 +10,22 @@
 {% block main%}
 <div class="container session">
 
-    <section class="session__section">
+    <section class="session__section slideLeftRight">
         <h1 class="session__title">Personagens</h1>
         <p class="session__description">Aqui você encontra personagens do mundo Marvel e quadrinhos, filmes que ele tem participação.</p>
     </section>
 
     <section class="session__section">
         <div class="session__cards">
-            {% for character in characters %}
-                <div class="session__card">
-                    <img src="{{character.thumbnail.path}}/portrait_fantastic.{{character.thumbnail.extension}}" alt="{{character.name}}" class="session__img">
-                    <p class="session__name">{{character.name}}</p>
+                <div class="session__card home slideBottomTop">
+                    <img src="{{characters[0].thumbnail.path}}/portrait_fantastic.{{characters[0].thumbnail.extension}}" alt="{{characters[0].name}}" class="session__img">
+                    <p class="session__name">{{characters[0].name}}</p>
                 </div>
-            {% endfor %}
+
+                <div class="session__card home slideTopBottom">
+                    <img src="{{characters[1].thumbnail.path}}/portrait_fantastic.{{characters[1].thumbnail.extension}}" alt="{{characters[1].name}}" class="session__img">
+                    <p class="session__name">{{characters[1].name}}</p>
+                </div>
         </div>
 
         <a href="/characters" class="session__button">Explorar</a>
@@ -33,18 +36,21 @@
     <div class="container session">
         <section class="session__section">
             <div class="session__cards">
-                {% for comic in comics %}
-                    <div class="session__card">
-                        <img src="{{comic.thumbnail.path}}/portrait_fantastic.{{comic.thumbnail.extension}}" alt="{{comic.title}}" class="session__img">
-                        <p class="session__name">{{comic.title}}</p>
-                    </div>
-                {% endfor %}
+                <div class="session__card home slideBottomTop">
+                    <img src="{{comics[0].thumbnail.path}}/portrait_fantastic.{{comics[0].thumbnail.extension}}" alt="{{comics[0].title}}" class="session__img">
+                    <p class="session__name">{{comics[0].title}}</p>
+                </div>
+
+                <div class="session__card home slideTopBottom">
+                    <img src="{{comics[0].thumbnail.path}}/portrait_fantastic.{{comics[0].thumbnail.extension}}" alt="{{comics[0].title}}" class="session__img">
+                    <p class="session__name">{{comics[0].title}}</p>
+                </div>
             </div>
 
             <a href="/comics" class="session__button">Explorar</a>
         </section>
 
-        <section class="session__section">
+        <section class="session__section slideRightLeft">
             <h1 class="session__title">Quadrinhos</h1>
             <p class="session__description">Aqui você pode encontrar os mais diversos quadrinhos da Marvel, fique  à vontade para explorar.</p>
         </section>
@@ -52,12 +58,12 @@
 </div>
 
 <div class="container movies">
-    <h1 class="session__title">Series</h1>
-    <p class="session__description">Aqui é onde você viajar pelas series do Universo Marvel.</p>
+    <h1 class="session__title slideTopBottom">Series</h1>
+    <p class="session__description slideTopBottom">Aqui é onde você viajar pelas series do Universo Marvel.</p>
 
-    <div class="session__cards">
+    <div class="session__cards home">
         {% for serie in series %}
-            <div class="session__card">
+            <div class="session__card slideTopBottom">
                 <img src="{{serie.thumbnail.path}}/portrait_fantastic.{{serie.thumbnail.extension}}" alt="{{serie.title}}" class="session__img">
                 <p class="session__name">{{serie.title}}</p>
             </div>

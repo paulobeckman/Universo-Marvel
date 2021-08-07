@@ -38,5 +38,26 @@
     <footer>Feito por paulo beckman</footer>
 
     <script src="/scripts.js"></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        const slide = ScrollReveal({
+            distance: '50px',
+            duration: 2000,
+            reset: true,
+        });
+
+
+        ScrollReveal().reveal('.banner__title', {...slide, origin: 'top', delay: 50});
+        ScrollReveal().reveal('.banner__description', {...slide, origin: 'top', delay: 250});
+
+        ScrollReveal().reveal('.slideLeftRight', { ...slide, origin:'left', delay: 50 });
+        ScrollReveal().reveal('.slideRightLeft', { ...slide, origin:'right', delay: 50 });
+        ScrollReveal().reveal('.slideBottomTop',  { ...slide, origin:'bottom', delay: 50 });
+        ScrollReveal().reveal('.slideTopBottom',  { ...slide, origin:'top', delay: 50 });
+        ScrollReveal().reveal('.slideTopBottom',  { ...slide, origin:'top', delay: 50 });
+
+        ScrollReveal().reveal('.session__button',  { ...slide, origin:'slideRightLeft', delay: 100 });
+    </script> 
 </body>
 </html>

@@ -15,6 +15,11 @@
   position: relative;
 }
 
+.session__card:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
 .session__card::before{
   content: '';
   position: absolute;
@@ -25,19 +30,12 @@
   z-index: -1;
   height: 100%;
   background: var(--red);
-  transition: .3s all ease
+  transition: .3s all ease;
+  border-radius: 10px;
 }
 
 .session__card:hover::before{
   width: 100%;
-  border-radius: 10px;
-}
-
-.session__card:hover {
-  transform: scale(1.1);
-  transition: 0.3s;
-
-  /* background-position: 0 100%; */
 }
 
 .session__img{
@@ -49,11 +47,11 @@
   border-bottom: solid 5px var(--white);
 }
 
-.session__card:first-child{
+.session__card.home:first-child{
   transform: translateY(60px);
 }
 
-.session__card:last-child{
+.session__card.home:last-child{
   transform: translateY(-60px);
 }
 
@@ -74,11 +72,11 @@
   height: 100px;
 }
 
-.comics .session__card:last-child{
+.comics .session__card.home:last-child{
   transform: translateY(-60px);
 }
 
-.comics .session__card:first-child{
+.comics .session__card.home:first-child{
   transform: translateY(60px);
 }
 
@@ -86,12 +84,8 @@
   grid-template-columns: repeat(4, 250px);
 }
 
-.movies .session__card:first-child{
-  transform: translateY(0);
-}
-
-.movies .session__card:last-child{
-  transform: translateY(0);
+.movies .session__card:hover{
+  transform: scale(1.0);
 }
 
 /*CHARACTERS, COMICS, SERIES*/
@@ -101,14 +95,6 @@
   row-gap: 60px;
 
   padding: 55px 0;
-}
-
-.all .session__card:first-child{
-  transform: translateY(0);
-}
-
-.all .session__card:last-child{
-  transform: translateY(0);
 }
 
 .all .session__title {
