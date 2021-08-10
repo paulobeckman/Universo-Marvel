@@ -165,8 +165,8 @@ footer {
 }
 
 .session__button:hover{
-    transform: scale(1.05);
-    transition: 0.3s;
+    transform: scale(1.05) !important;
+    transition: 0.3s !important;
 }
 
 .comics{

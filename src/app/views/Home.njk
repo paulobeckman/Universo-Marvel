@@ -61,9 +61,9 @@
     <h1 class="session__title slideTopBottom">Series</h1>
     <p class="session__description slideTopBottom">Aqui é onde você viajar pelas series do Universo Marvel.</p>
 
-    <div class="session__cards home">
+    <div class="session__cards">
         {% for serie in series %}
-            <div class="session__card slideTopBottom">
+            <div class="session__card home slideTopBottom">
                 <img src="{{serie.thumbnail.path}}/portrait_fantastic.{{serie.thumbnail.extension}}" alt="{{serie.title}}" class="session__img">
                 <p class="session__name">{{serie.title}}</p>
             </div>

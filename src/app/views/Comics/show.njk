@@ -2,7 +2,7 @@
 
 {% block banner %}
   <div class="banner_session">
-    <div class="banner_container-img">
+    <div class="banner_container-img slideTopBottom">
       <img class="banner_img" src="{{comic.thumbnail.path}}/portrait_fantastic.{{comic.thumbnail.extension}}" alt="{{comic.name}}" alt="">
     </div>
     <h1 class="banner__title">{{comic.title}}</h1>
@@ -14,14 +14,14 @@
 {% block main%}
 <div class="container all">
   <section class="session__section">
-    <h1 class="session__title">Criadores</h1>
+    <h1 class="session__title slideLeftRight">Criadores</h1>
       {% for creator in creators %}
-        <p class="session__description">{{creator.fullName}}</p>
+        <p class="session__description slideRightLeft">{{creator.fullName}}</p>
       {% endfor %}
 
-    <h1 class="session__title">Series</h1>
-    <div class="session__cards">
-      <div class="session__card">
+    <h1 class="session__title slideLeftRight">Series</h1>
+    <div class="session__cards slideRightLeft">
+      <div class="session__card disabled">
           <img src="{{serie.thumbnail.path}}/portrait_fantastic.{{serie.thumbnail.extension}}" alt="{{serie.name}}" class="session__img">
           <p class="session__name">{{serie.title}}</p>
       </div>

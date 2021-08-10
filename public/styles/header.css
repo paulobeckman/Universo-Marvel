@@ -6,7 +6,8 @@
     height: 60px;
 }
 
-.links__item + .links__item{
+.links__item + .links__item,
+.links__nav{
     margin-left: 80px;
 }
 

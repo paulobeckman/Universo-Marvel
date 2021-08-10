@@ -16,8 +16,8 @@
 }
 
 .session__card:hover {
-  transform: scale(1.1);
-  transition: 0.3s;
+  transform: scale(1.1) !important;
+  transition: 0.3s !important;
 }
 
 .session__card::before{
@@ -47,12 +47,12 @@
   border-bottom: solid 5px var(--white);
 }
 
-.session__card.home:first-child{
-  transform: translateY(60px);
+.session .session__card.home:first-child{
+  transform: translateY(60px) !important;
 }
 
-.session__card.home:last-child{
-  transform: translateY(-60px);
+.session .session__card.home:last-child{
+  transform: translateY(-60px) !important;
 }
 
 .session__name {
@@ -73,19 +73,21 @@
 }
 
 .comics .session__card.home:last-child{
-  transform: translateY(-60px);
+  transform: translateY(-60px) !important;
 }
 
 .comics .session__card.home:first-child{
-  transform: translateY(60px);
+  transform: translateY(60px) !important;
 }
 
 .movies .session__cards{
   grid-template-columns: repeat(4, 250px);
 }
 
-.movies .session__card:hover{
-  transform: scale(1.0);
+.session__card.home:hover,
+.session__card.disabled:hover{
+  transform: scale(1.0) !important;
+  cursor: initial;
 }
 
 /*CHARACTERS, COMICS, SERIES*/

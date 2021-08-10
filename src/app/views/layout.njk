@@ -17,13 +17,15 @@
     <div class="background-gray">
         <header>
             <div class="container">
-                <nav class="links">
-                    <a class="links__item"><img src="/image/Marvel_Logo.png" alt="logo marvel" class="links__img"></a>
-                    <a href="/home" class="links__item">Home</a>
-                    <a href="/characters" class="links__item">Personagens</a>
-                    <a href="/comics" class="links__item">Quadrinhos</a>
-                    <a href="/series" class="links__item">Series</a>
-                </nav>
+                <div class="links">
+                    <img class="links__img" src="/image/Marvel_Logo.png" alt="logo marvel" >
+                    <nav class="links__nav">
+                        <a href="/home" class="links__item">Home</a>
+                        <a href="/characters" class="links__item">Personagens</a>
+                        <a href="/comics" class="links__item">Quadrinhos</a>
+                        <a href="/series" class="links__item">Series</a>
+                    </nav>
+                </div>
             </div>
         </header>
 
@@ -54,7 +56,6 @@
         ScrollReveal().reveal('.slideLeftRight', { ...slide, origin:'left', delay: 50 });
         ScrollReveal().reveal('.slideRightLeft', { ...slide, origin:'right', delay: 50 });
         ScrollReveal().reveal('.slideBottomTop',  { ...slide, origin:'bottom', delay: 50 });
-        ScrollReveal().reveal('.slideTopBottom',  { ...slide, origin:'top', delay: 50 });
         ScrollReveal().reveal('.slideTopBottom',  { ...slide, origin:'top', delay: 50 });
 
         ScrollReveal().reveal('.session__button',  { ...slide, origin:'slideRightLeft', delay: 100 });
