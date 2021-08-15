@@ -31,7 +31,7 @@
 
 Universo marvel é um projeto que você encontra informações de personagens, quadrinhos e series que fazem parte do universo Marvel.
 
-As informações sobre personagens, quadrinhos e series são fornecidas pela api da marvel. Com isso, as informações na site são distribuidas da seguinte forma:
+As informações sobre personagens, quadrinhos e series são fornecidas pela [api da marvel][api]. Com isso, as informações na site são distribuidas da seguinte forma:
 - Página Home: 
   - Aqui você pode encontra um resumo do site, apresentando cards e descrições.
 
@@ -102,6 +102,12 @@ $ cd Universo-Marvel
 # Instale as dependências
 $ npm install
 
+# Crie um arquivo .env e adicione as seguintes variáveis 
+APP_API_KEY=
+APP_HASH=
+
+#Adicione nas variáveis criadas acima, sua chave KEY fornecida pela marvel e HASH 
+
 # Execute a aplicação em modo de desenvolvimento
 $ npm start
 
@@ -127,3 +133,4 @@ Feito por Paulo Beckman 👋🏽 [Entre em contato!](https://www.linkedin.com/in
 [JavaScript]: https://developer.mozilla.org/pt-BR/docs/Aprender/JavaScript
 [Nunjucks]: https://www.npmjs.com/package/nunjucks
 [bJS]: https://scrollrevealjs.org/
+[api]: https://developer.marvel.com/
